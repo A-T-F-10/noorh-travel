@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const values = [
-  { emoji: "🤝", label: "المصداقية", sub: "الشفافية في كل تعاملاتنا", cls: "value-item--1" },
-  { emoji: "🏆", label: "الاحترافية", sub: "معايير عالمية في الأداء", cls: "value-item--2" },
-  { emoji: "📌", label: "الالتزام", sub: "مواعيد دقيقة ووعود محققة", cls: "value-item--3" },
-  { emoji: "⭐", label: "التميّز", sub: "إبداع في كل تفصيل", cls: "value-item--4" },
-  { emoji: "❤️", label: "رضا العملاء", sub: "راحتكم هي أولويتنا", cls: "value-item--5" },
+  { emoji: "🤝", label: "المصداقية", sub: "الشفافية في كل تعاملاتنا", cls: "value-item--1", img: "/images/why-trust.jpg" },
+  { emoji: "🏆", label: "الاحترافية", sub: "معايير عالمية في الأداء", cls: "value-item--2", img: "/images/why-team.jpg" },
+  { emoji: "📌", label: "الالتزام", sub: "مواعيد دقيقة ووعود محققة", cls: "value-item--3", img: "/images/why-excellence.jpg" },
+  { emoji: "⭐", label: "التميّز", sub: "إبداع في كل تفصيل", cls: "value-item--4", img: "/images/why-support.jpg" },
+  { emoji: "❤️", label: "رضا العملاء", sub: "راحتكم هي أولويتنا", cls: "value-item--5", img: "/images/why-happy.jpg" },
 ];
 
 export default function Vision() {
@@ -47,7 +47,8 @@ export default function Vision() {
           </div>
           <div className="values-grid">
             {values.map((v) => (
-              <div className={`value-item ${v.cls}`} key={v.label}>
+              <div className={`value-item ${v.cls}`} key={v.label} style={{ backgroundImage: `url('${v.img}')` }}>
+                <div className="value-overlay"></div>
                 <div className="value-glow"></div>
                 <span className="value-emoji">{v.emoji}</span>
                 <strong>{v.label}</strong>

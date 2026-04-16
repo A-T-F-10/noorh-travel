@@ -16,6 +16,12 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <p>© 2026 وكالة نور الهدى للسفر والسياحة — جميع الحقوق محفوظة</p>
+          <p className="footer-credit">
+            Designed & Built by{" "}
+            <a href="https://www.blackbird.blog/" target="_blank" rel="noopener noreferrer">
+              Blackbird
+            </a>
+          </p>
         </div>
       </div>
     </footer>
